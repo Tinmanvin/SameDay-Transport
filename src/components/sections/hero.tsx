@@ -2,8 +2,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Phone, ShieldCheck, Clock4, HeartHandshake } from "lucide-react";
 import heroVan from "@/assets/hero-van.jpg";
-import { WaveButton } from "./wave-button";
-import { AiWidget } from "./ai-widget";
+import { WaveButton } from "../wave-button";
+import { AiWidget } from "../ai-widget";
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
