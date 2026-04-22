@@ -14,7 +14,7 @@ export function Hero() {
   const word2 = "Transport.";
 
   return (
-    <section ref={ref} className="bg-paper relative overflow-hidden pt-32 pb-20 lg:pt-36 lg:pb-28">
+    <section ref={ref} className="bg-paper relative overflow-hidden pt-28 pb-16 lg:pt-32 lg:pb-24">
       {/* Decorative background type — subtle, oversized */}
       <div className="pointer-events-none absolute inset-x-0 top-1/2 -z-0 -translate-y-1/2 select-none text-center">
         <div className="font-display text-[20vw] font-black leading-none tracking-[-0.05em] text-ink/[0.035] whitespace-nowrap">
@@ -22,11 +22,11 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-10 px-6 lg:grid-cols-12 lg:gap-12 lg:px-10">
+      <div className="relative mx-auto grid max-w-[1500px] grid-cols-1 items-center gap-8 px-6 lg:grid-cols-12 lg:gap-6 lg:px-10">
         {/* Left — Headline + CTAs */}
         <motion.div
           style={{ y: headlineY }}
-          className="relative z-20 lg:col-span-6"
+          className="relative z-20 lg:col-span-5"
         >
           <motion.span
             initial={{ opacity: 0, y: 14 }}
@@ -38,7 +38,7 @@ export function Hero() {
             Same-day slots available now
           </motion.span>
 
-          <h1 className="font-display text-[14vw] leading-[0.85] tracking-[-0.05em] text-ink sm:text-[88px] lg:text-[clamp(64px,6.5vw,120px)]">
+          <h1 className="font-display leading-[0.85] tracking-[-0.05em] text-ink text-[14vw] sm:text-[80px] lg:text-[clamp(56px,5.6vw,104px)]">
             {[word, word2].map((w, idx) => (
               <span key={w} className="block overflow-hidden">
                 <motion.span
@@ -89,28 +89,35 @@ export function Hero() {
           </motion.ul>
         </motion.div>
 
-        {/* Right — Van image as the hero centerpiece */}
+        {/* Right — HUGE Van image, white right-side cropped via overflow */}
         <motion.div
           style={{ y: vanY }}
-          initial={{ opacity: 0, x: 60, scale: 0.96 }}
+          initial={{ opacity: 0, x: 80, scale: 0.96 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-          className="relative z-10 lg:col-span-6"
+          className="relative z-10 lg:col-span-7"
         >
-          <div className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-coral/15 blur-3xl" />
-          <img
-            src={heroVan}
-            alt="SameDay Transport branded van with cutaway view of furniture, sofa and boxes inside"
-            width={1600}
-            height={1100}
-            className="relative z-10 mx-auto block w-full max-w-full drop-shadow-[0_50px_40px_rgba(30,22,18,0.22)]"
-          />
-          <div className="pointer-events-none absolute -bottom-4 left-[8%] right-[8%] z-0 h-8 rounded-full bg-ink/10 blur-2xl" />
+          {/* coral glow behind */}
+          <div className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[80%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-coral/15 blur-3xl" />
+
+          {/* Crop frame: hides the empty white block on the right of the source image.
+              The image is rendered ~138% wide so the van fills the frame fully. */}
+          <div className="relative aspect-[16/11] w-full overflow-hidden">
+            <img
+              src={heroVan}
+              alt="SameDay Transport branded van with cutaway view of furniture, sofa and boxes inside"
+              width={1920}
+              height={1080}
+              className="absolute inset-y-0 left-0 h-full w-[138%] max-w-none object-cover object-left drop-shadow-[0_50px_40px_rgba(30,22,18,0.22)]"
+            />
+          </div>
+          {/* speed dust under van */}
+          <div className="pointer-events-none absolute -bottom-2 left-[6%] right-[28%] z-0 h-8 rounded-full bg-ink/15 blur-2xl" />
         </motion.div>
       </div>
 
       {/* Marquee */}
-      <div className="relative mt-16 overflow-hidden border-y border-ink/10 bg-ink/[0.02] py-4">
+      <div className="relative mt-12 overflow-hidden border-y border-ink/10 bg-ink/[0.02] py-4">
         <div className="animate-marquee flex w-max gap-12 whitespace-nowrap text-sm font-semibold uppercase tracking-[0.25em] text-ink/50">
           {Array.from({ length: 2 }).map((_, k) => (
             <div key={k} className="flex items-center gap-12">
