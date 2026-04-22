@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "SameDay Transport" },
+      { name: "description", content: "SameDay Transport, fast reliable van service, same day availability, book in minutes!" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "SameDay Transport" },
+      { property: "og:description", content: "SameDay Transport, fast reliable van service, same day availability, book in minutes!" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "SameDay Transport" },
+      { name: "twitter:description", content: "SameDay Transport, fast reliable van service, same day availability, book in minutes!" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/JXdskIvjX1WVgV7Zo8JDYa8PL4U2/social-images/social-1776879060546-SameDay_transport_LOGO.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/JXdskIvjX1WVgV7Zo8JDYa8PL4U2/social-images/social-1776879060546-SameDay_transport_LOGO.webp" },
     ],
     links: [
       {
