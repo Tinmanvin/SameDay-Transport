@@ -1,6 +1,18 @@
+import { useEffect } from "react";
 import { Logo } from "./logo";
 
 export function Footer() {
+  useEffect(() => {
+    const id = "leadconnector-chat-widget";
+    if (document.getElementById(id)) return;
+    const s = document.createElement("script");
+    s.id = id;
+    s.src = "https://beta.leadconnectorhq.com/loader.js";
+    s.async = true;
+    s.setAttribute("data-resources-url", "https://beta.leadconnectorhq.com/chat-widget/loader.js");
+    s.setAttribute("data-widget-id", "69e8fbdd4b625a42307c3e1a");
+    document.body.appendChild(s);
+  }, []);
   return (
     <footer className="border-t border-ink/10 bg-cream py-12">
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-8 px-6 md:grid-cols-4 lg:px-10">
