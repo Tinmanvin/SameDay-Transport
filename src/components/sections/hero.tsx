@@ -92,6 +92,25 @@ export function Hero() {
               <li className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-coral" /> Fully insured transport</li>
             </motion.ul>
           </motion.div>
+
+          {/* Van image — contained within the hero, sits below the headline */}
+          <motion.div
+            style={{ x: vanX, y: vanY }}
+            initial={{ opacity: 0, y: 40, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            className="relative mt-10"
+          >
+            <div className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-coral/15 blur-3xl" />
+            <img
+              src={heroVan}
+              alt="SameDay Transport branded van with cutaway view of furniture, sofa and boxes inside"
+              width={1600}
+              height={1100}
+              className="relative z-10 mx-auto block w-full max-w-full drop-shadow-[0_50px_40px_rgba(30,22,18,0.22)]"
+            />
+            <div className="pointer-events-none absolute -bottom-4 left-[8%] right-[8%] z-0 h-8 rounded-full bg-ink/10 blur-2xl" />
+          </motion.div>
         </div>
 
         {/* Right — AI widget */}
