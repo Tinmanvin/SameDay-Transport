@@ -1,8 +1,9 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Phone, ShieldCheck, Clock4, HeartHandshake, Sparkles } from "lucide-react";
+import { ArrowRight, Phone, ShieldCheck, Clock4, HeartHandshake } from "lucide-react";
 import heroVan from "@/assets/hero-van.jpg";
 import { WaveButton } from "../wave-button";
+import { AiWidget } from "../ai-widget";
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -97,12 +98,10 @@ export function Hero() {
               className="mt-8 flex flex-wrap items-center gap-3"
             >
               <WaveButton variant="coral" size="lg">
-                <span>Get a fast quote</span>
-                <ArrowRight className="h-4 w-4" />
+                Get a fast quote <ArrowRight className="h-4 w-4" />
               </WaveButton>
               <WaveButton variant="outline" size="lg">
-                <Phone className="h-4 w-4" />
-                <span>Call now</span>
+                <Phone className="h-4 w-4" /> Call now
               </WaveButton>
             </motion.div>
 
@@ -119,75 +118,10 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Right — floating proof cards (replaces the AI widget) */}
+        {/* Right — AI widget */}
         <div className="relative z-20 lg:col-span-4">
-          <div className="relative mx-auto max-w-[380px] space-y-5 lg:sticky lg:top-32">
-            {/* Response time card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30, x: 20 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ delay: 0.6, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="relative rounded-3xl border border-ink/10 bg-card/90 p-6 shadow-[0_30px_60px_-30px_rgba(30,22,18,0.35)] backdrop-blur-sm"
-            >
-              <div className="flex items-center gap-3">
-                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-coral text-cream">
-                  <Sparkles className="h-5 w-5" />
-                </span>
-                <div className="leading-tight">
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/50">
-                    Avg. response
-                  </div>
-                  <div className="font-display text-2xl font-bold text-ink">Under 5 minutes</div>
-                </div>
-              </div>
-              <p className="mt-4 text-sm text-ink/65">
-                Message us before lunch — most jobs confirmed and slotted in the same morning.
-              </p>
-            </motion.div>
-
-            {/* Rating card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30, x: -20 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ delay: 0.75, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="relative rounded-3xl bg-ink p-6 text-cream shadow-[0_30px_60px_-30px_rgba(30,22,18,0.55)]"
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-2">
-                  {["#e85d3a", "#d18a3a", "#f5f0e8"].map((c, i) => (
-                    <span
-                      key={c}
-                      className="grid h-9 w-9 place-items-center rounded-full border-2 border-ink text-[10px] font-bold"
-                      style={{ backgroundColor: c, color: i === 2 ? "var(--ink)" : "var(--cream)" }}
-                    >
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <div className="leading-tight">
-                  <div className="font-display text-2xl font-bold">4.9 / 5</div>
-                  <div className="text-[11px] font-medium text-cream/60">120+ happy moves</div>
-                </div>
-              </div>
-              <p className="mt-4 text-sm text-cream/70">
-                “Booked at 9am, sofa delivered by 1pm. Wrapped, careful, no scuffs.”
-              </p>
-              <p className="mt-2 text-[11px] uppercase tracking-[0.18em] text-cream/40">— Hannah W.</p>
-            </motion.div>
-
-            {/* Live availability pill */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.7 }}
-              className="flex items-center justify-center gap-2 rounded-full border border-coral/30 bg-coral/10 px-4 py-3 text-sm font-semibold text-coral-deep"
-            >
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-coral opacity-60" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-coral" />
-              </span>
-              3 same-day slots left today
-            </motion.div>
+          <div className="lg:sticky lg:top-28">
+            <AiWidget />
           </div>
         </div>
       </div>
