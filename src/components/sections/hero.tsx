@@ -48,12 +48,12 @@ export function Hero() {
 
       <div className="relative mx-auto grid min-h-[calc(100vh-64px)] max-w-[1500px] grid-cols-1 items-center gap-10 px-6 pt-32 pb-20 lg:grid-cols-12 lg:gap-6 lg:px-10 lg:pt-40 lg:pb-32">
         {/* Spacer column for van on lg */}
-        <div className="hidden lg:col-span-6 lg:block" aria-hidden />
+        <div className="hidden lg:col-span-7 lg:block" aria-hidden />
 
-        {/* Headline — right of viewport */}
+        {/* Headline — centered within the right-hand empty space */}
         <motion.div
           style={{ y: headlineY }}
-          className="relative z-20 lg:col-span-6"
+          className="relative z-20 flex flex-col items-start text-left lg:col-span-5 lg:items-center lg:text-center lg:pr-6"
         >
           <motion.span
             initial={{ opacity: 0, y: 14 }}
