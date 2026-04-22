@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { ArrowRight, Phone, ShieldCheck, Clock4, HeartHandshake } from "lucide-react";
 import heroVan from "@/assets/hero-van.jpg";
 import { WaveButton } from "../wave-button";
-import { AiWidget } from "../ai-widget";
+
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -115,13 +115,6 @@ export function Hero() {
             <li className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-coral" /> Fully insured transport</li>
           </motion.ul>
         </motion.div>
-
-        {/* AI widget — far right */}
-        <div className="relative z-20 lg:col-span-3">
-          <div className="lg:sticky lg:top-28">
-            <AiWidget />
-          </div>
-        </div>
       </div>
 
       {/* Marquee */}
