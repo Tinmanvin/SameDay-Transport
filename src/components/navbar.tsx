@@ -32,15 +32,9 @@ export function Navbar() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <a
-            href="tel:+441234567890"
-            className="hidden items-center gap-2 text-sm font-semibold text-ink hover:text-coral md:inline-flex"
-          >
+          <WaveButton variant="coral" size="sm" onClick={() => (window.location.href = "tel:+441234567890")}>
             <Phone className="h-4 w-4" />
-            0123 456 7890
-          </a>
-          <WaveButton variant="ink" size="sm" onClick={() => (window.location.hash = "#quote")}>
-            Get a fast quote
+            Call now
           </WaveButton>
         </div>
       </div>
