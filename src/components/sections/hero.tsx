@@ -30,7 +30,7 @@ export function Hero() {
         initial={{ opacity: 0, x: -160, scale: 1.04 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-        className="absolute left-0 top-0 z-0 h-[78vh] w-[62vw] max-w-[1100px] min-h-[560px] lg:h-[88vh]"
+        className="absolute left-0 top-0 z-0 h-[95vh] w-[82vw] max-w-[1500px] min-h-[680px] lg:h-[112vh]"
       >
         <img
           src={heroVan}
@@ -46,14 +46,14 @@ export function Hero() {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-[28%] bg-gradient-to-l from-paper via-paper/80 to-transparent" />
       </motion.div>
 
-      <div className="relative mx-auto grid min-h-[88vh] max-w-[1500px] grid-cols-1 items-center gap-10 px-6 pt-32 pb-20 lg:grid-cols-12 lg:gap-6 lg:px-10 lg:pt-36 lg:pb-28">
+      <div className="relative mx-auto grid min-h-[88vh] max-w-[1500px] grid-cols-1 items-center gap-10 px-6 pt-32 pb-20 lg:grid-cols-12 lg:gap-6 lg:px-10 lg:pt-40 lg:pb-32">
         {/* Spacer column for van on lg */}
-        <div className="hidden lg:col-span-5 lg:block" aria-hidden />
+        <div className="hidden lg:col-span-7 lg:block" aria-hidden />
 
-        {/* Headline — center/right of viewport */}
+        {/* Headline — right of viewport */}
         <motion.div
           style={{ y: headlineY }}
-          className="relative z-20 lg:col-span-4"
+          className="relative z-20 lg:col-span-5"
         >
           <motion.span
             initial={{ opacity: 0, y: 14 }}
