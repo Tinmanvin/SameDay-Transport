@@ -36,16 +36,18 @@ export function Hero() {
           src={heroVan}
           alt="SameDay Transport branded van bursting from the left with cutaway view of furniture, sofa and boxes inside"
           className="h-full w-full object-cover drop-shadow-[0_60px_50px_rgba(30,22,18,0.25)]"
-          style={{ objectPosition: "28% center" }}
+          style={{
+            objectPosition: "28% center",
+            maskImage:
+              "linear-gradient(to right, black 0%, black 55%, rgba(0,0,0,0.85) 72%, rgba(0,0,0,0.4) 86%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to right, black 0%, black 55%, rgba(0,0,0,0.85) 72%, rgba(0,0,0,0.4) 86%, transparent 100%)",
+          }}
         />
         {/* speed dust under van */}
         <div className="pointer-events-none absolute bottom-[8%] left-[8%] right-[20%] h-10 rounded-full bg-ink/10 blur-2xl" />
         {/* coral accent disc behind */}
         <div className="pointer-events-none absolute -left-10 top-20 -z-10 h-72 w-72 rounded-full bg-coral/15 blur-3xl" />
-        {/* fade right edge into cream so any residual background blends seamlessly */}
-        {/* fade right edge into cream so the cutoff blends seamlessly */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-[42%] bg-gradient-to-l from-paper via-paper/95 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-[18%] bg-paper" />
       </motion.div>
 
       <div className="relative mx-auto grid min-h-[calc(100vh-64px)] max-w-[1500px] grid-cols-1 items-center gap-10 px-6 pt-32 pb-20 lg:grid-cols-12 lg:gap-6 lg:px-10 lg:pt-40 lg:pb-32">
