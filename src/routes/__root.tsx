@@ -44,14 +44,6 @@ export const Route = createRootRoute({
         href: appCss,
       },
     ],
-    scripts: [
-      {
-        src: "https://beta.leadconnectorhq.com/loader.js",
-        "data-resources-url": "https://beta.leadconnectorhq.com/chat-widget/loader.js",
-        "data-widget-id": "69e8fbdd4b625a42307c3e1a",
-        async: true,
-      },
-    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
