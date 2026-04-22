@@ -24,37 +24,13 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-10 px-6 lg:grid-cols-12 lg:px-10">
+      <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-start gap-10 px-6 lg:grid-cols-12 lg:px-10">
         {/* Left — Van + headline */}
         <div className="relative lg:col-span-8">
-          {/* Van image — bursts from left */}
-          <motion.div
-            style={{ x: vanX, y: vanY }}
-            initial={{ opacity: 0, x: -120, scale: 1.04 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-            className="relative -ml-[8vw] lg:-ml-[10vw]"
-          >
-            <div className="relative">
-              <img
-                src={heroVan}
-                alt="SameDay Transport branded van bursting from the left with cutaway view of furniture, sofa and boxes inside"
-                width={1600}
-                height={1100}
-                className="relative z-10 w-[125%] max-w-none drop-shadow-[0_60px_50px_rgba(30,22,18,0.25)] lg:w-[115%]"
-              />
-              {/* speed dust under van */}
-              <div className="absolute -bottom-6 left-[10%] right-[18%] z-0 h-10 rounded-full bg-ink/10 blur-2xl" />
-            </div>
-
-            {/* coral accent disc behind */}
-            <div className="absolute -left-4 top-12 -z-0 h-72 w-72 rounded-full bg-coral/15 blur-3xl" />
-          </motion.div>
-
           {/* Headline */}
           <motion.div
             style={{ y: headlineY }}
-            className="relative z-20 -mt-6 lg:absolute lg:left-[6%] lg:top-[6%] lg:mt-0 lg:max-w-[58%]"
+            className="relative z-20"
           >
             <motion.span
               initial={{ opacity: 0, y: 14 }}
@@ -115,6 +91,25 @@ export function Hero() {
               <li className="flex items-center gap-2"><HeartHandshake className="h-4 w-4 text-coral" /> Careful handling</li>
               <li className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-coral" /> Fully insured transport</li>
             </motion.ul>
+          </motion.div>
+
+          {/* Van image — contained within the hero, sits below the headline */}
+          <motion.div
+            style={{ x: vanX, y: vanY }}
+            initial={{ opacity: 0, y: 40, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            className="relative mt-10"
+          >
+            <div className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-coral/15 blur-3xl" />
+            <img
+              src={heroVan}
+              alt="SameDay Transport branded van with cutaway view of furniture, sofa and boxes inside"
+              width={1600}
+              height={1100}
+              className="relative z-10 mx-auto block w-full max-w-full drop-shadow-[0_50px_40px_rgba(30,22,18,0.22)]"
+            />
+            <div className="pointer-events-none absolute -bottom-4 left-[8%] right-[8%] z-0 h-8 rounded-full bg-ink/10 blur-2xl" />
           </motion.div>
         </div>
 
