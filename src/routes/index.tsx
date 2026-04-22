@@ -1,26 +1,50 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/navbar";
+import { Hero } from "@/components/sections/hero";
+import { Trust } from "@/components/sections/trust";
+import { Services } from "@/components/sections/services";
+import { WhyUs } from "@/components/sections/why-us";
+import { HowItWorks } from "@/components/sections/how-it-works";
+import { ServiceAreas } from "@/components/sections/service-areas";
+import { Testimonials } from "@/components/sections/testimonials";
+import { Faq } from "@/components/sections/faq";
+import { FinalCta } from "@/components/sections/final-cta";
+import { Footer } from "@/components/footer";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "SameDay Transport — Fast, careful van transport. Book today." },
+      {
+        name: "description",
+        content:
+          "Same-day collections, deliveries and small moves across Greater Manchester. Real people, real vans, fair upfront pricing. Get a fast quote in minutes.",
+      },
+      { property: "og:title", content: "SameDay Transport — Move it today." },
+      {
+        property: "og:description",
+        content: "Fast, reliable van transport for collections, deliveries and urgent moves. Book in minutes.",
+      },
+      { property: "og:type", content: "website" },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <main className="bg-cream text-ink">
+      <Navbar />
+      <Hero />
+      <Trust />
+      <Services />
+      <WhyUs />
+      <HowItWorks />
+      <ServiceAreas />
+      <Testimonials />
+      <Faq />
+      <FinalCta />
+      <Footer />
+    </main>
+  );
 }
