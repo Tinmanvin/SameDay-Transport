@@ -43,7 +43,9 @@ export function Hero() {
         {/* coral accent disc behind */}
         <div className="pointer-events-none absolute -left-10 top-20 -z-10 h-72 w-72 rounded-full bg-coral/15 blur-3xl" />
         {/* fade right edge into cream so any residual background blends seamlessly */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-[28%] bg-gradient-to-l from-paper via-paper/80 to-transparent" />
+        {/* fade right edge into cream so the cutoff blends seamlessly */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[42%] bg-gradient-to-l from-paper via-paper/95 to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[18%] bg-paper" />
       </motion.div>
 
       <div className="relative mx-auto grid min-h-[calc(100vh-64px)] max-w-[1500px] grid-cols-1 items-center gap-10 px-6 pt-32 pb-20 lg:grid-cols-12 lg:gap-6 lg:px-10 lg:pt-40 lg:pb-32">
