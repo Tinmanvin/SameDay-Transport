@@ -30,7 +30,7 @@ export function Hero() {
         initial={{ opacity: 0, x: -160, scale: 1.04 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-        className="absolute left-0 top-0 z-0 h-[calc(100vh-64px)] w-[70vw] max-w-[1180px] min-h-[600px] lg:h-[calc(100vh-64px)]"
+        className="absolute left-0 top-[72px] z-0 h-[calc(100vh-136px)] w-[70vw] max-w-[1180px] min-h-[540px]"
       >
         <img
           src={heroVan}
