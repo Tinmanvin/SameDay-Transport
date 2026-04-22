@@ -98,13 +98,10 @@ export function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.6 }}
-            className="mt-8 flex flex-wrap items-center gap-3"
+            className="mt-8 flex w-full justify-start lg:justify-center"
           >
             <WaveButton variant="coral" size="lg">
               Get a fast quote <ArrowRight className="h-4 w-4" />
-            </WaveButton>
-            <WaveButton variant="outline" size="lg">
-              <Phone className="h-4 w-4" /> Call now
             </WaveButton>
           </motion.div>
 
