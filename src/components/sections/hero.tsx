@@ -69,9 +69,9 @@ export function Hero() {
             Same-day slots available now
           </motion.span>
 
-          <h1 className="font-display text-[14vw] leading-[0.85] tracking-[-0.05em] text-ink sm:text-[88px] lg:text-[clamp(64px,6.4vw,120px)]">
+          <h1 className="font-display text-[14vw] leading-[0.95] tracking-[-0.05em] text-ink sm:text-[88px] lg:text-[clamp(64px,6.4vw,120px)]">
             {[word, word2].map((w, idx) => (
-              <span key={w} className="block overflow-hidden">
+              <span key={w} className="block overflow-hidden pb-[0.12em]">
                 <motion.span
                   initial={{ y: "110%" }}
                   animate={{ y: "0%" }}
