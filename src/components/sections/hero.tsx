@@ -24,19 +24,19 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Full-bleed van — flush to top (under navbar) and left edge */}
+      {/* Full-bleed van — flush to top (under navbar), shifted left to cut at front wheel */}
       <motion.div
         style={{ x: vanX, y: vanY }}
         initial={{ opacity: 0, x: -160, scale: 1.04 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-        className="absolute left-0 top-0 z-0 h-[95vh] w-[82vw] max-w-[1500px] min-h-[680px] lg:h-[112vh]"
+        className="absolute left-0 top-0 z-0 h-[calc(100vh-64px)] w-[70vw] max-w-[1180px] min-h-[600px] lg:h-[calc(100vh-64px)]"
       >
         <img
           src={heroVan}
           alt="SameDay Transport branded van bursting from the left with cutaway view of furniture, sofa and boxes inside"
-          className="h-full w-full object-cover object-left drop-shadow-[0_60px_50px_rgba(30,22,18,0.25)]"
-          style={{ objectPosition: "left center" }}
+          className="h-full w-full object-cover drop-shadow-[0_60px_50px_rgba(30,22,18,0.25)]"
+          style={{ objectPosition: "28% center" }}
         />
         {/* speed dust under van */}
         <div className="pointer-events-none absolute bottom-[8%] left-[8%] right-[20%] h-10 rounded-full bg-ink/10 blur-2xl" />
