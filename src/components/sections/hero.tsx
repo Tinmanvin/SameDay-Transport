@@ -57,7 +57,7 @@ export function Hero() {
         {/* Headline — centered within the right-hand empty space */}
         <motion.div
           style={{ y: headlineY }}
-          className="relative z-20 flex flex-col items-center text-center lg:col-span-5 lg:pr-6"
+          className="relative z-20 flex flex-col items-center text-center lg:items-center lg:text-center lg:col-span-5 lg:pr-6"
         >
           <motion.span
             initial={{ opacity: 0, y: 14 }}
