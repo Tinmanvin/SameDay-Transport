@@ -57,7 +57,7 @@ export function Hero() {
         {/* Headline — centered within the right-hand empty space */}
         <motion.div
           style={{ y: headlineY }}
-          className="relative z-20 flex flex-col items-start text-left lg:col-span-5 lg:items-center lg:text-center lg:pr-6"
+          className="relative z-20 flex flex-col items-center text-center lg:col-span-5 lg:pr-6"
         >
           <motion.span
             initial={{ opacity: 0, y: 14 }}
@@ -98,7 +98,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.6 }}
-            className="mt-8 flex w-full justify-start lg:justify-center"
+            className="mt-8 flex w-full justify-center"
           >
             <WaveButton variant="coral" size="lg">
               Get a fast quote <ArrowRight className="h-4 w-4" />
