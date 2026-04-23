@@ -35,9 +35,8 @@ export function Hero() {
         <img
           src={heroVan}
           alt="SameDay Transport branded van bursting from the left with cutaway view of furniture, sofa and boxes inside"
-          className="h-full w-full object-contain object-center drop-shadow-[0_60px_50px_rgba(30,22,18,0.25)] lg:object-cover"
+          className="h-full w-full object-contain object-center drop-shadow-[0_60px_50px_rgba(30,22,18,0.25)] lg:object-cover lg:[object-position:28%_center]"
           style={{
-            objectPosition: "50% center",
             maskImage:
               "linear-gradient(to right, black 0%, black 55%, rgba(0,0,0,0.85) 72%, rgba(0,0,0,0.4) 86%, transparent 100%)",
             WebkitMaskImage:
