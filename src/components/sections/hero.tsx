@@ -30,13 +30,14 @@ export function Hero() {
         initial={{ opacity: 0, x: -160, scale: 1.04 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-        className="absolute left-0 right-0 top-[72px] z-0 h-[42vh] w-full max-w-none lg:right-auto lg:bottom-0 lg:h-auto lg:w-[70vw] lg:max-w-[1180px] lg:min-h-[540px]"
+        className="absolute left-0 top-[72px] bottom-0 z-0 w-[70vw] max-w-[1180px] min-h-[540px]"
       >
         <img
           src={heroVan}
           alt="SameDay Transport branded van bursting from the left with cutaway view of furniture, sofa and boxes inside"
-          className="h-full w-full object-contain object-center drop-shadow-[0_60px_50px_rgba(30,22,18,0.25)] lg:object-cover lg:[object-position:28%_center]"
+          className="h-full w-full object-cover drop-shadow-[0_60px_50px_rgba(30,22,18,0.25)]"
           style={{
+            objectPosition: "28% center",
             maskImage:
               "linear-gradient(to right, black 0%, black 55%, rgba(0,0,0,0.85) 72%, rgba(0,0,0,0.4) 86%, transparent 100%)",
             WebkitMaskImage:
@@ -49,14 +50,14 @@ export function Hero() {
         <div className="pointer-events-none absolute -left-10 top-20 -z-10 h-72 w-72 rounded-full bg-coral/15 blur-3xl" />
       </motion.div>
 
-      <div className="relative mx-auto grid min-h-[calc(100vh-64px)] max-w-[1500px] grid-cols-1 items-start gap-10 px-6 pt-[calc(72px+42vh+24px)] pb-20 lg:grid-cols-12 lg:items-center lg:gap-6 lg:px-10 lg:pt-40 lg:pb-32">
+      <div className="relative mx-auto grid min-h-[calc(100vh-64px)] max-w-[1500px] grid-cols-1 items-center gap-10 px-6 pt-32 pb-20 lg:grid-cols-12 lg:gap-6 lg:px-10 lg:pt-40 lg:pb-32">
         {/* Spacer column for van on lg */}
         <div className="hidden lg:col-span-7 lg:block" aria-hidden />
 
         {/* Headline — centered within the right-hand empty space */}
         <motion.div
           style={{ y: headlineY }}
-          className="relative z-20 flex flex-col items-center text-center lg:col-span-5 lg:items-center lg:text-center lg:pr-6"
+          className="relative z-20 flex flex-col items-start text-left lg:col-span-5 lg:items-center lg:text-center lg:pr-6"
         >
           <motion.span
             initial={{ opacity: 0, y: 14 }}
@@ -97,7 +98,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.6 }}
-            className="mt-8 flex w-full justify-center"
+            className="mt-8 flex w-full justify-start lg:justify-center"
           >
             <WaveButton variant="coral" size="lg">
               Get a fast quote <ArrowRight className="h-4 w-4" />
@@ -108,7 +109,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.05, duration: 0.6 }}
-            className="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium text-ink/70 lg:justify-start"
+            className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-ink/70"
           >
             <li className="flex items-center gap-2"><Clock4 className="h-4 w-4 text-coral" /> Same-day availability</li>
             <li className="flex items-center gap-2"><HeartHandshake className="h-4 w-4 text-coral" /> Careful handling</li>
