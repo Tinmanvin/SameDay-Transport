@@ -30,14 +30,14 @@ export function Hero() {
         initial={{ opacity: 0, x: -160, scale: 1.04 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-        className="absolute left-0 top-[72px] bottom-0 z-0 w-[70vw] max-w-[1180px] min-h-[540px]"
+        className="absolute left-0 right-0 top-[72px] z-0 h-[42vh] w-full max-w-none lg:right-auto lg:bottom-0 lg:h-auto lg:w-[70vw] lg:max-w-[1180px] lg:min-h-[540px]"
       >
         <img
           src={heroVan}
           alt="SameDay Transport branded van bursting from the left with cutaway view of furniture, sofa and boxes inside"
-          className="h-full w-full object-cover drop-shadow-[0_60px_50px_rgba(30,22,18,0.25)]"
+          className="h-full w-full object-contain object-center drop-shadow-[0_60px_50px_rgba(30,22,18,0.25)] lg:object-cover"
           style={{
-            objectPosition: "28% center",
+            objectPosition: "50% center",
             maskImage:
               "linear-gradient(to right, black 0%, black 55%, rgba(0,0,0,0.85) 72%, rgba(0,0,0,0.4) 86%, transparent 100%)",
             WebkitMaskImage:
